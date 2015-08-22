@@ -15,7 +15,7 @@ run_analysis <- function(clean.data = FALSE) {
     #Compute the mean grouped by subject/lables
     dataset.melt <- melt(dataset, id.var = c("subject", "activity"))
     result <- dcast(dataset.melt, subject + activity ~ variable, mean)
-    write.table(result, file = "./data/tidy_data.txt", row.name = FALSE)
+    write.table(result, file = "./data/tidy_data.txt", row.names=FALSE)
     result
 }
 
@@ -89,5 +89,5 @@ get.sources <- function(url, clean.data) {
         message("Unzip done!")
     }
     
-    message("row data are here :)")
+    message("raw data are here :)")
 }
