@@ -17,12 +17,13 @@ The run_analysis.R script does the following:
   3. Uses descriptive activity names to name the activities in the dataset  
   4. Appropriately labels the data set with descriptive variable names
   5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+ 
 
- ### Libraries used
+### Libraries used
   + dplyr
   + reshape2
   
- ### Functions
+### Functions
   * __run_analysis__ <- main functions to run the analysis. 
 		It takes an option _clean.data_.
 		if _clean.data_ is true it will remove _.data_ folder if exists and will redownload the entire dataset from [this url](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) into _.data_ folder.
@@ -34,7 +35,7 @@ The run_analysis.R script does the following:
   * __get.y__ <- function to load, merge and clean labels data from test and train dataset
 		returns a data.frame with clean labels
 		
-  * __get.subjec__t <- function to load and clean subjects from test and train dataset
+  * __get.subjec__ <- function to load and clean subjects from test and train dataset
 		returns a data.frame with clean merged subjects
 		
   * __get.sources__ <- function to download and unzip dataset source file from specified _url_ into _.data_ folder.
